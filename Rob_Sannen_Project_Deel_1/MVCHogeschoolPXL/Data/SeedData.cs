@@ -45,7 +45,9 @@ namespace MVCHogeschoolPXL.Data
                 context.AcademieJaren.AddRange(a);
                 context.SaveChanges();
                 var student = context.Studenten.Where(x => x.Gebruiker.Voornaam == "Rob").FirstOrDefault();
-                Inschrijving i = new Inschrijving { StudentId = student.StudentId, VakLectorId = 1, AcademieJaarId = 1 };
+                var vakLector = context.VakLectoren.Include(vl => vl.Lector).ThenInclude(vl => vl.Gebruiker).Where(vl => vl.Lector.Gebruiker.Naam == "Palmaers").FirstOrDefault();
+                var academiejaar = context.AcademieJaren.Where(a => a.StartDatum == Convert.ToDateTime("09/20/2021")).FirstOrDefault();
+                Inschrijving i = new Inschrijving { StudentId = student.StudentId, VakLectorId = vakLector.VaklectorId, AcademieJaarId = academiejaar.AcademieJaarId };
                 context.Inschrijvingen.AddRange(i);
                 context.SaveChanges();
 

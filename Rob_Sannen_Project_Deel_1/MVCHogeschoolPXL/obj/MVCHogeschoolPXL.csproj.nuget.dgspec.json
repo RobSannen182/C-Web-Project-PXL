@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\C#Web\\Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\MVCHogeschoolPXL.csproj": {}
+    "C:\\C-Web-Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\MVCHogeschoolPXL.csproj": {}
   },
   "projects": {
-    "C:\\C#Web\\Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\MVCHogeschoolPXL.csproj": {
+    "C:\\C-Web-Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\MVCHogeschoolPXL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\C#Web\\Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\MVCHogeschoolPXL.csproj",
+        "projectUniqueName": "C:\\C-Web-Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\MVCHogeschoolPXL.csproj",
         "projectName": "MVCHogeschoolPXL",
-        "projectPath": "C:\\C#Web\\Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\MVCHogeschoolPXL.csproj",
+        "projectPath": "C:\\C-Web-Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\MVCHogeschoolPXL.csproj",
         "packagesPath": "C:\\Users\\12002533\\.nuget\\packages\\",
-        "outputPath": "C:\\C#Web\\Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\obj\\",
+        "outputPath": "C:\\C-Web-Project\\Rob_Sannen_Project_Deel_1\\MVCHogeschoolPXL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

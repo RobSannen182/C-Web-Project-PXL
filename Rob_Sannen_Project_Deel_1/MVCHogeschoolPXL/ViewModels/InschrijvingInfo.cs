@@ -33,6 +33,8 @@ namespace MVCHogeschoolPXL.ViewModels
         [DisplayName("Naam student")]
         public string StudentFullName { get; set; }
         public int AcademieJaarId { get; set; }
+        [DisplayName("Startdatum")]
+        [DisplayFormat(DataFormatString = "{0:dd MMM yyy}")]
         public DateTime AcademieJaar { get; set; }
         [DisplayName("Vaknaam")]
         public string VakNaam { get; set; }
