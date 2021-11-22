@@ -30,6 +30,7 @@ namespace MVCHogeschoolPXL
             services.AddControllersWithViews();
             services.AddRazorPages()
                 .AddRazorRuntimeCompilation();
+            services.AddScoped<IGebruikersRepo, GebruikersRepo>();
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:PXLConnection"]);

@@ -14,12 +14,12 @@ namespace MVCHogeschoolPXL.Controllers
     public class VakLectorController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly GebruikersRepo _repo;
+        private readonly IGebruikersRepo _repo;
 
-        public VakLectorController(ApplicationDbContext context)
+        public VakLectorController(ApplicationDbContext context, IGebruikersRepo repo)
         {
             _context = context;
-            _repo = new GebruikersRepo(_context);
+            _repo = repo;
         }
 
         // GET: VakLector

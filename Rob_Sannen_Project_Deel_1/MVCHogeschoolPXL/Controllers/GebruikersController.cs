@@ -14,12 +14,12 @@ namespace MVCHogeschoolPXL.Controllers
     public class GebruikersController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private GebruikersRepo _repo;
+        private IGebruikersRepo _repo;
 
-        public GebruikersController(ApplicationDbContext context)
+        public GebruikersController(ApplicationDbContext context, IGebruikersRepo repo)
         {
             _context = context;
-            _repo = new GebruikersRepo(_context);
+            _repo = repo;
         }
 
         // GET: Gebruikers

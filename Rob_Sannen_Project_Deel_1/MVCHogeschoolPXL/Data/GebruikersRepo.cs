@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MVCHogeschoolPXL.Data
 {
-    public class GebruikersRepo
+    public class GebruikersRepo : IGebruikersRepo
     {
         ApplicationDbContext _context;
 
@@ -17,7 +17,7 @@ namespace MVCHogeschoolPXL.Data
             _context = context;
         }
 
-        public List<GebruikerInfo> GetGebruikersInfoList(string functie =null)
+        public List<GebruikerInfo> GetGebruikersInfoList(string functie = null)
         {
             var gebruikers = _context.Gebruikers.ToList();
             List<GebruikerInfo> gebruikerInfoList = new List<GebruikerInfo>();
