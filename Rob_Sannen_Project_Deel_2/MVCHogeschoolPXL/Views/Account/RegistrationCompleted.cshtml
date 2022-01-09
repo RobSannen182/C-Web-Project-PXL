@@ -1,0 +1,25 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityUser
+
+@{
+    ViewData["Title"] = "RegistrationCompleted";
+    Layout = "";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVCHogeschoolPXL</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<h1 class="text-center display-4 m-5">Registration completed!</h1>
+
+<div>
+    <hr />
+    <h1 class="text-center">Welkom @Model.Email</h1>
+    <hr />
+</div>
+<div class="text-center p-5">
+    <a class="btn btn-info" asp-action="Login">Terug</a>
+</div>

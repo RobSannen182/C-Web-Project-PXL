@@ -1,0 +1,48 @@
+﻿@model MVCHogeschoolPXL.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVCHogeschoolPXL</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<h1 class="text-center">Login</h1>
+<hr />
+<div>
+    <div class="col-md-4 card mx-auto p-5">
+        <form asp-action="Login" class="w-75 mx-auto">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group text-center">
+                <input type="submit" value="Login" class="btn btn-primary mt-4 mb-2" />
+            </div>
+            <div class="text-center">
+                <a asp-action="Register" class="btn btn-outline-info">Registreer een nieuwe gebruiker.</a>
+            </div>
+        </form>
+        <div class="mt-5 text-center pt-3">
+            <a href="https://www.pxl.be/"><img src="~/images/PXL.jpeg" height="150" /></a>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
