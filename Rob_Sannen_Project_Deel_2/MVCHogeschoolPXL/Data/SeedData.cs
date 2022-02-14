@@ -14,10 +14,23 @@ namespace MVCHogeschoolPXL.Data
     {
         public static async Task EnsurePopulated(IApplicationBuilder app)
         {
-            ApplicationDbContext context = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<ApplicationDbContext>();
-            RoleManager<IdentityRole> roleManager = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            ApplicationDbContext context = app.ApplicationServices
+                .CreateScope()
+                .ServiceProvider
+                .GetRequiredService<ApplicationDbContext>();
+
+            RoleManager<IdentityRole> roleManager = app.ApplicationServices
+                .CreateScope()
+                .ServiceProvider
+                .GetRequiredService<RoleManager<IdentityRole>>();
+
             await CreateRolesAsync(context, roleManager);
-            UserManager<IdentityUser> userManager = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+            UserManager<IdentityUser> userManager = app.ApplicationServices
+                .CreateScope()
+                .ServiceProvider
+                .GetRequiredService<UserManager<IdentityUser>>();
+
             await CreateIdentityRecordAsync(userManager);
 
             if (!context.Gebruikers.Any())
